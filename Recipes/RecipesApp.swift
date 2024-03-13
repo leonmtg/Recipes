@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import Dependencies
 
 @main
 struct RecipesApp: App {
+    @Dependency(\.database) var database
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
