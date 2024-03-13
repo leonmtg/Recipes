@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/swift,swiftpackagemanager,xcode,macos,visualstudiocode,objective-c
-# Edit at https://www.toptal.com/developers/gitignore?templates=swift,swiftpackagemanager,xcode,macos,visualstudiocode,objective-c
+# Created by https://www.toptal.com/developers/gitignore/api/macos,xcode,visualstudiocode,swift,objective-c
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,xcode,visualstudiocode,swift,objective-c
 
 ### macOS ###
 # General
@@ -154,12 +154,6 @@ Dependencies/
 # https://github.com/johnno1962/injectionforxcode
 
 
-### SwiftPackageManager ###
-Packages
-xcuserdata
-*.xcodeproj
-
-
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -192,4 +186,4 @@ xcuserdata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-# End of https://www.toptal.com/developers/gitignore/api/swift,swiftpackagemanager,xcode,macos,visualstudiocode,objective-c
+# End of https://www.toptal.com/developers/gitignore/api/macos,xcode,visualstudiocode,swift,objective-c
