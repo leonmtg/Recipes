@@ -10,7 +10,7 @@ import Dependencies
 import SwiftData
 
 struct Database {
-    var modelContainer: @MainActor () throws -> ModelContainer
+    var modelContainer: @MainActor () -> ModelContainer
 }
 
 extension Database: DependencyKey {
