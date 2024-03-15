@@ -19,9 +19,13 @@ struct RecipesView: View {
                 ForEach(categories) { category in
                     Section(category.name) {
                         ForEach(category.recipes) { recipe in
-                            HStack {
-                                Text(recipe.name)
-                                    .font(.title2)
+                            NavigationLink {
+                                RecipeDetailView(recipe: recipe)
+                            } label: {
+                                HStack {
+                                    Text(recipe.name)
+                                        .font(.title2)
+                                }
                             }
                         }
                         .onDelete { indexSet in
