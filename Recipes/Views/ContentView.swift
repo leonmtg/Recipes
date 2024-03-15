@@ -7,16 +7,34 @@
 
 import SwiftUI
 import Dependencies
+import SwiftData
 
 struct ContentView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var categories: [Category]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(categories) { category in
+                    Section(category.name) {
+                        ForEach(category.recipes) { recipe in
+                            HStack {
+                                Text(recipe.name)
+                                    .font(.title2)
+                            }
+                        }
+                        .onDelete { indexSet in
+                            for index in indexSet {
+                                modelContext.delete(category.recipes[index])
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Recipes")
+            .headerProminence(.increased)
         }
-        .padding()
     }
 }
 
