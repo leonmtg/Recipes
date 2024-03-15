@@ -13,13 +13,18 @@ class Recipe {
     var name: String
     var image: Data?
     
+    var minutesToCook: Int = 0
+    var servingSize: Int = 1
+    
     var category: Category?
     @Relationship(deleteRule: .cascade, inverse: \Ingredient.recipes) var ingredients: [Ingredient] = []
     @Relationship(deleteRule: .cascade, inverse: \Step.recipe) var steps: [Step] = []
     
-    init(name: String, image: Data? = nil, category: Category? = nil, ingredients: [Ingredient] = [], steps: [Step] = []) {
+    init(name: String, image: Data? = nil, minutesToCook: Int = 0, servingSize: Int = 1, category: Category? = nil, ingredients: [Ingredient] = [], steps: [Step] = []) {
         self.name = name
         self.image = image
+        self.minutesToCook = minutesToCook
+        self.servingSize = servingSize
         self.category = category
         self.ingredients = ingredients
         self.steps = steps
