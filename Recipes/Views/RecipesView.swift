@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RecipesView.swift
 //  Recipes
 //
 //  Created by Leon on 2024/3/13.
@@ -9,7 +9,7 @@ import SwiftUI
 import Dependencies
 import SwiftData
 
-struct ContentView: View {
+struct RecipesView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var categories: [Category]
     
@@ -41,6 +41,6 @@ struct ContentView: View {
 #Preview {
     @Dependency(\.database) var database
     
-    return ContentView()
+    return RecipesView()
         .modelContainer(database.modelContainer())
 }

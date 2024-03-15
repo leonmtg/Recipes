@@ -15,7 +15,7 @@ struct RecipesApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecipesView()
                 .modelContainer(database.modelContainer())
         }
     }
