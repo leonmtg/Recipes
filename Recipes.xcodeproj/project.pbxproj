@@ -106,8 +106,8 @@
 			children = (
 				353A18632BA1F7ED0057916D /* Services */,
 				353A18592BA1F08A0057916D /* Models */,
+				35B28F7E2BA483BC005283EB /* Views */,
 				353A182F2BA1EA890057916D /* RecipesApp.swift */,
-				353A18312BA1EA890057916D /* ContentView.swift */,
 				353A18332BA1EA8A0057916D /* Assets.xcassets */,
 				353A18352BA1EA8A0057916D /* Preview Content */,
 			);
@@ -155,6 +155,14 @@
 				353A18642BA1F7FA0057916D /* Database.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		35B28F7E2BA483BC005283EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				353A18312BA1EA890057916D /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

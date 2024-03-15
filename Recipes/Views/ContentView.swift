@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Dependencies
 
 struct ContentView: View {
     var body: some View {
@@ -20,5 +21,8 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    @Dependency(\.database) var database
+    
+    return ContentView()
+        .modelContainer(database.modelContainer())
 }

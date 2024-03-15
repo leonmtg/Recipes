@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Dependencies
+import SwiftData
 
 @main
 struct RecipesApp: App {
@@ -15,6 +16,7 @@ struct RecipesApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .modelContainer(database.modelContainer())
         }
     }
 }
