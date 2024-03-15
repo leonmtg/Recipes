@@ -13,8 +13,11 @@ class Recipe {
     var name: String
     var image: Data?
     
-    init(name: String, image: Data? = nil) {
+    var category: Category?
+    
+    init(name: String, image: Data? = nil, category: Category? = nil) {
         self.name = name
         self.image = image
+        self.category = category
     }
 }
