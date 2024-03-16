@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftData
+import UIKit
 
 @Model
 class Recipe {
@@ -28,5 +29,19 @@ class Recipe {
         self.category = category
         self.ingredients = ingredients
         self.steps = steps
+    }
+}
+
+extension Recipe {
+    var viewImage: UIImage? {
+        guard let image else { return nil }
+        return UIImage(data: image)
+    }
+    var viewImageWithDefault: UIImage {
+        guard let image else { return UIImage(systemName: "fork.knife.circle")! }
+        return UIImage(data: image) ?? UIImage(systemName: "fork.knife.circle")!
+    }
+    var viewCategory: String {
+        category?.name ?? ""
     }
 }
