@@ -52,6 +52,13 @@ struct RecipeDetailView: View {
             }
         }
         .navigationTitle(recipe.name)
+        .toolbar {
+            NavigationLink {
+                EditRecipeView(recipe: recipe)
+            } label: {
+                Image(systemName: "square.and.pencil.circle")
+            }
+        }
     }
 }
 
