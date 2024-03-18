@@ -48,4 +48,9 @@ extension Recipe {
     var viewSortedIngredients: [Ingredient] {
         ingredients.sorted { $0.name < $1.name }
     }
+    
+    var viewSortedSteps: [Step] {
+        steps.sorted { $0.stepNumber < $1.stepNumber }
+    }
+
 }

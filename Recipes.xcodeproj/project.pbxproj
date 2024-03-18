@@ -20,6 +20,7 @@
 		353A18622BA1F3390057916D /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 353A18612BA1F3390057916D /* Dependencies */; };
 		353A18652BA1F7FA0057916D /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353A18642BA1F7FA0057916D /* Database.swift */; };
 		3558EDF12BA88ABB00BB79A0 /* IngredientDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3558EDF02BA88ABB00BB79A0 /* IngredientDetailView.swift */; };
+		3558EDF32BA88CBF00BB79A0 /* StepDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3558EDF22BA88CBF00BB79A0 /* StepDetailView.swift */; };
 		35B28F802BA48625005283EB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B28F7F2BA48625005283EB /* Category.swift */; };
 		35B28F822BA489CA005283EB /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B28F812BA489CA005283EB /* RecipeDetailView.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		353A185E2BA1F1BB0057916D /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		353A18642BA1F7FA0057916D /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		3558EDF02BA88ABB00BB79A0 /* IngredientDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetailView.swift; sourceTree = "<group>"; };
+		3558EDF22BA88CBF00BB79A0 /* StepDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDetailView.swift; sourceTree = "<group>"; };
 		35B28F7F2BA48625005283EB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		35B28F812BA489CA005283EB /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 				353A18312BA1EA890057916D /* RecipesView.swift */,
 				35B28F812BA489CA005283EB /* RecipeDetailView.swift */,
 				3558EDF02BA88ABB00BB79A0 /* IngredientDetailView.swift */,
+				3558EDF22BA88CBF00BB79A0 /* StepDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				353A18302BA1EA890057916D /* RecipesApp.swift in Sources */,
 				35B28F802BA48625005283EB /* Category.swift in Sources */,
 				35B28F822BA489CA005283EB /* RecipeDetailView.swift in Sources */,
+				3558EDF32BA88CBF00BB79A0 /* StepDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

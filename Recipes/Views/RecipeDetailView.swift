@@ -32,6 +32,9 @@ struct RecipeDetailView: View {
                 NavigationLink("Ingredients") {
                     IngredientDetailView(recipe: recipe)
                 }
+                NavigationLink("Instructions") {
+                    StepDetailView(recipe: recipe)
+                }
             }
             .listRowBackground(Color.primary.opacity(0.05))
         }
