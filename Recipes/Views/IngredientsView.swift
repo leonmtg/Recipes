@@ -1,5 +1,5 @@
 //
-//  IngredientDetailView.swift
+//  IngredientsView.swift
 //  Recipes
 //
 //  Created by Leon on 2024/3/18.
@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 import Dependencies
 
-struct IngredientDetailView: View {
+struct IngredientsView: View {
     @Environment(\.modelContext) private var modelContext
     let recipe: Recipe
     
@@ -48,6 +48,6 @@ struct IngredientDetailView: View {
         }))
     
     return NavigationStack {
-        IngredientDetailView(recipe: recipes[0])
+        IngredientsView(recipe: recipes[0])
     }
 }

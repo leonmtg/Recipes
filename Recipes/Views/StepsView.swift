@@ -1,5 +1,5 @@
 //
-//  StepDetailView.swift
+//  StepsView.swift
 //  Recipes
 //
 //  Created by Leon on 2024/3/18.
@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 import Dependencies
 
-struct StepDetailView: View {
+struct StepsView: View {
     @Environment(\.modelContext) private var modelContext
     let recipe: Recipe
     
@@ -48,6 +48,6 @@ struct StepDetailView: View {
         }))
     
     return NavigationStack {
-        StepDetailView(recipe: recipes[0])
+        StepsView(recipe: recipes[0])
     }
 }

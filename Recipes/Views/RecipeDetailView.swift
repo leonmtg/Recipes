@@ -30,10 +30,10 @@ struct RecipeDetailView: View {
                 LabeledContent("Serving Size", value: "\(recipe.servingSize)")
                 
                 NavigationLink("Ingredients") {
-                    IngredientDetailView(recipe: recipe)
+                    IngredientsView(recipe: recipe)
                 }
                 NavigationLink("Instructions") {
-                    StepDetailView(recipe: recipe)
+                    StepsView(recipe: recipe)
                 }
             }
             .listRowBackground(Color.primary.opacity(0.05))
