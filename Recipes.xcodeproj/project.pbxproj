@@ -21,6 +21,7 @@
 		353A18652BA1F7FA0057916D /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353A18642BA1F7FA0057916D /* Database.swift */; };
 		3558EDF12BA88ABB00BB79A0 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3558EDF02BA88ABB00BB79A0 /* IngredientsView.swift */; };
 		3558EDF32BA88CBF00BB79A0 /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3558EDF22BA88CBF00BB79A0 /* StepsView.swift */; };
+		3558EDF52BA890F900BB79A0 /* EditRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3558EDF42BA890F900BB79A0 /* EditRecipeView.swift */; };
 		35B28F802BA48625005283EB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B28F7F2BA48625005283EB /* Category.swift */; };
 		35B28F822BA489CA005283EB /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B28F812BA489CA005283EB /* RecipeDetailView.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		353A18642BA1F7FA0057916D /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		3558EDF02BA88ABB00BB79A0 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 		3558EDF22BA88CBF00BB79A0 /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
+		3558EDF42BA890F900BB79A0 /* EditRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRecipeView.swift; sourceTree = "<group>"; };
 		35B28F7F2BA48625005283EB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		35B28F812BA489CA005283EB /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +173,7 @@
 			children = (
 				353A18312BA1EA890057916D /* RecipesView.swift */,
 				35B28F812BA489CA005283EB /* RecipeDetailView.swift */,
+				3558EDF42BA890F900BB79A0 /* EditRecipeView.swift */,
 				3558EDF02BA88ABB00BB79A0 /* IngredientsView.swift */,
 				3558EDF22BA88CBF00BB79A0 /* StepsView.swift */,
 			);
@@ -318,6 +321,7 @@
 				3558EDF12BA88ABB00BB79A0 /* IngredientsView.swift in Sources */,
 				353A185B2BA1F09A0057916D /* Recipe.swift in Sources */,
 				353A185F2BA1F1BB0057916D /* Step.swift in Sources */,
+				3558EDF52BA890F900BB79A0 /* EditRecipeView.swift in Sources */,
 				353A18322BA1EA890057916D /* RecipesView.swift in Sources */,
 				353A18302BA1EA890057916D /* RecipesApp.swift in Sources */,
 				35B28F802BA48625005283EB /* Category.swift in Sources */,
