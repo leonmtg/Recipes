@@ -44,4 +44,8 @@ extension Recipe {
     var viewCategory: String {
         category?.name ?? ""
     }
+    
+    var viewSortedIngredients: [Ingredient] {
+        ingredients.sorted { $0.name < $1.name }
+    }
 }

@@ -20,3 +20,13 @@ class Ingredient {
         self.recipes = recipes
     }
 }
+
+extension Ingredient {
+    var viewIngredient: String {
+        if quantity.isEmpty {
+            return name
+        } else {
+            return "\(quantity) \(name)"
+        }
+    }
+}
