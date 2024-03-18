@@ -28,6 +28,10 @@ struct RecipeDetailView: View {
                 LabeledContent("Category", value: "\(recipe.viewCategory)")
                 LabeledContent("Minutes to Cook", value: "\(recipe.minutesToCook)")
                 LabeledContent("Serving Size", value: "\(recipe.servingSize)")
+                
+                NavigationLink("Ingredients") {
+                    IngredientDetailView(recipe: recipe)
+                }
             }
             .listRowBackground(Color.primary.opacity(0.05))
         }
