@@ -12,6 +12,7 @@ import Dependencies
 struct IngredientsView: View {
     @Environment(\.modelContext) private var modelContext
     let recipe: Recipe
+    var editMode = false
     
     var body: some View {
         List {
