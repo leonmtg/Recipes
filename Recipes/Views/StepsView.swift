@@ -13,28 +13,34 @@ struct StepsView: View {
     @Environment(\.modelContext) private var modelContext
     let recipe: Recipe
     var editMode = false
+    @State private var scrollToBottom = false
     
     var body: some View {
-        List {
-            ForEach(recipe.viewSortedSteps) { step in
-                @Bindable var step = step
-                if editMode {
-                    VStack {
-                        Stepper(value: $step.stepNumber) {
-                            Image(systemName: "\(step.stepNumber).square")
-                                .font(.title)
+        ScrollViewReader { proxy in
+            List {
+                ForEach(recipe.viewSortedSteps) { step in
+                    @Bindable var step = step
+                    if editMode {
+                        VStack {
+                            Stepper(value: $step.stepNumber) {
+                                Image(systemName: "\(step.stepNumber).square")
+                                    .font(.title)
+                            }
+                            
+                            TextField("instruction", text: $step.instruction, axis: .vertical)
+                                .lineLimit(10)
                         }
-                        
-                        TextField("instruction", text: $step.instruction, axis: .vertical)
-                            .lineLimit(10)
+                        .id(step.stepNumber)
+                    } else {
+                        Label(step.instruction, systemImage: "\(step.stepNumber).square")
                     }
-                    .id(step.stepNumber)
-                } else {
-                    Label(step.instruction, systemImage: "\(step.stepNumber).square")
                 }
+                .onDelete(perform: editMode ? delete : nil)
+                .listRowBackground(Color.primary.opacity(0.05))
             }
-            .onDelete(perform: editMode ? delete : nil)
-            .listRowBackground(Color.primary.opacity(0.05))
+            .onChange(of: scrollToBottom, initial: false) { _, _ in
+                proxy.scrollTo(recipe.steps.count)
+            }
         }
         .scrollContentBackground(.hidden)
         .background(.regularMaterial)
@@ -60,6 +66,7 @@ struct StepsView: View {
                             instruction: ""
                         )
                     )
+                    scrollToBottom.toggle()
                 }
             }
         }
