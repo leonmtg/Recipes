@@ -18,8 +18,16 @@ struct IngredientsView: View {
         List {
             ForEach(recipe.viewSortedIngredients) { ingredient in
                 @Bindable var ingredient = ingredient
-                Text(ingredient.viewIngredient)
+                if editMode {
+                    VStack {
+                        TextField("qty", text: $ingredient.quantity)
+                        TextField("ingredient", text: $ingredient.name)
+                    }
+                } else {
+                    Text(ingredient.viewIngredient)
+                }
             }
+            .onDelete(perform: editMode ? delete : nil)
             .listRowBackground(Color.primary.opacity(0.05))
         }
         .scrollContentBackground(.hidden)
@@ -36,10 +44,23 @@ struct IngredientsView: View {
             }
         }
         .navigationTitle("Ingredients")
+        .toolbar {
+            if editMode {
+                Button("", systemImage: "plus") {
+                    recipe.ingredients.append(Ingredient(name: "", quantity: ""))
+                }
+            }
+        }
+    }
+    
+    func delete(indexSet: IndexSet) {
+        for index in indexSet {
+            modelContext.delete(recipe.viewSortedIngredients[index])
+        }
     }
 }
 
-#Preview {
+#Preview("Normal Mode") {
     @Dependency(\.database) var database
     let container = database.modelContainer()
     
@@ -50,5 +71,19 @@ struct IngredientsView: View {
     
     return NavigationStack {
         IngredientsView(recipe: recipes[0])
+    }
+}
+
+#Preview("Edit Mode") {
+    @Dependency(\.database) var database
+    let container = database.modelContainer()
+    
+    let recipes = try! container.mainContext.fetch(
+        FetchDescriptor<Recipe>(predicate: #Predicate { recipe in
+            recipe.name == "Lobster Bisque"
+        }))
+    
+    return NavigationStack {
+        IngredientsView(recipe: recipes[0], editMode: true)
     }
 }
